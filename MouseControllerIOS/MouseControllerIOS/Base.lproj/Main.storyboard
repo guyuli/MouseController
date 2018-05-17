@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,31 +23,40 @@
                                 <rect key="frame" x="10" y="10" width="647" height="355"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="akN-h1-bYr" userLabel="Left Right Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="537.5" height="355"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="557.5" height="355"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4z-lG-F79" userLabel="L Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="264" height="355"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="355"/>
                                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="L">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clickLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2E0-IO-XB7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9O-rR-Eqz" userLabel="R Button">
-                                                <rect key="frame" x="274" y="0.0" width="263.5" height="355"/>
+                                                <rect key="frame" x="284" y="0.0" width="273.5" height="355"/>
                                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="R">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clickRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTC-PQ-E6L"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWE-ME-VaM" userLabel="Scroll View">
-                                        <rect key="frame" x="557.5" y="0.0" width="89.5" height="355"/>
+                                        <rect key="frame" x="577.5" y="0.0" width="69.5" height="355"/>
                                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="KWE-ME-VaM" firstAttribute="width" secondItem="akN-h1-bYr" secondAttribute="width" multiplier="1:8" id="A3s-IW-877"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,6 +68,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="leftButton" destination="t4z-lG-F79" id="h1R-mD-lZP"/>
+                        <outlet property="rightButton" destination="A9O-rR-Eqz" id="BXD-Bf-TPg"/>
+                        <outlet property="scrollBar" destination="KWE-ME-VaM" id="JCG-dx-tUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
