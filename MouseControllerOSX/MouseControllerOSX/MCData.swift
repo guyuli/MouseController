@@ -1,8 +1,8 @@
 //
 //  MCData.swift
-//  MouseControllerIOS
+//  MouseControllerOSX
 //
-//  Created by Guyu Li on 2018-06-20.
+//  Created by Guyu Li on 2018-09-27.
 //  Copyright © 2018 Guyu Li. All rights reserved.
 //
 

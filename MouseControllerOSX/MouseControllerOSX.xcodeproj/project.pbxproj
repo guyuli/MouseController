@@ -11,6 +11,7 @@
 		032FE62420AE146B003F27E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FE62320AE146B003F27E0 /* ViewController.swift */; };
 		032FE62620AE146B003F27E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032FE62520AE146B003F27E0 /* Assets.xcassets */; };
 		032FE62920AE146B003F27E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FE62720AE146B003F27E0 /* Main.storyboard */; };
+		03776538215DD01F008BA991 /* MCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03776537215DD01F008BA991 /* MCData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		032FE62820AE146B003F27E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		032FE62A20AE146B003F27E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032FE62B20AE146B003F27E0 /* MouseControllerOSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MouseControllerOSX.entitlements; sourceTree = "<group>"; };
+		03776537215DD01F008BA991 /* MCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				032FE62120AE146B003F27E0 /* AppDelegate.swift */,
+				03776537215DD01F008BA991 /* MCData.swift */,
 				032FE62320AE146B003F27E0 /* ViewController.swift */,
-				032FE62520AE146B003F27E0 /* Assets.xcassets */,
 				032FE62720AE146B003F27E0 /* Main.storyboard */,
+				032FE62520AE146B003F27E0 /* Assets.xcassets */,
 				032FE62A20AE146B003F27E0 /* Info.plist */,
 				032FE62B20AE146B003F27E0 /* MouseControllerOSX.entitlements */,
 			);
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				032FE62420AE146B003F27E0 /* ViewController.swift in Sources */,
+				03776538215DD01F008BA991 /* MCData.swift in Sources */,
 				032FE62220AE146B003F27E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +267,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MouseControllerOSX/MouseControllerOSX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7QPSN8NHYY;
@@ -279,7 +282,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MouseControllerOSX/MouseControllerOSX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7QPSN8NHYY;
