@@ -35,11 +35,11 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
         
         // swipe gesture for scroll bar
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipeScrollBar(gesture:)))
-        swipeUp.direction = UISwipeGestureRecognizerDirection.up
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
         scrollBar.addGestureRecognizer(swipeUp)
         
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipeScrollBar(gesture:)))
-        swipeDown.direction = UISwipeGestureRecognizerDirection.down
+        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         scrollBar.addGestureRecognizer(swipeDown)
         
         // configure motionManager
@@ -94,16 +94,16 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
     @objc func swipeScrollBar(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.right:
+            case UISwipeGestureRecognizer.Direction.right:
                     print("Swiped right")
-            case UISwipeGestureRecognizerDirection.down:
+            case UISwipeGestureRecognizer.Direction.down:
                     print("Swiped down")
                     mcDataSent.scroll = -1;
                     sendData()
                     mcDataSent.scroll = 0;
-            case UISwipeGestureRecognizerDirection.left:
+            case UISwipeGestureRecognizer.Direction.left:
                     print("Swiped left")
-            case UISwipeGestureRecognizerDirection.up:
+            case UISwipeGestureRecognizer.Direction.up:
                     print("Swiped up")
                     mcDataSent.scroll = 1;
                     sendData()
